@@ -15,6 +15,7 @@ app.use(express.json());
 
 app.use('/api/v1/tasks', tasks);
 
+// custom middleware for error handling
 app.use(notFound);
 app.use(errorHandlerMiddleware);
 const port = process.env.PORT || 5000;
