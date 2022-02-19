@@ -15,8 +15,10 @@ app.use(express.json());
 
 app.use('/api/v1/tasks', tasks);
 
+// custom middleware for error handling
 app.use(notFound);
 app.use(errorHandlerMiddleware);
+// port address
 const port = process.env.PORT || 5000;
 
 const start = async () => {
